@@ -1,5 +1,14 @@
 body {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
   margin: 0;
   font-family: system-ui, sans-serif;
+  background: #f5f6fa;
+  color: #1f2430;
+}
+
+h1 {
+  font-size: 1.25rem;
   text-align: center;
 }

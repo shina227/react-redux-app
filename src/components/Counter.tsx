@@ -7,11 +7,14 @@ const Counter = () => {
   const dispatch = useAppDispatch();
 
   return (
-    <div className={styles.counterContainer}>
-      <h2>Counter: {count}</h2>
-      <button onClick={() => dispatch(increment())} aria-label="Increment">+</button>
-      <button onClick={() => dispatch(decrement())} aria-label="Decrement">-</button>
-      <button onClick={() => dispatch(reset())}>Reset</button>
+    <div className={styles.card}>
+      <h2>Counter</h2>
+      <p className={styles.value}>{count}</p>
+      <div className={styles.actions}>
+        <button onClick={() => dispatch(decrement())} aria-label="Decrement">-</button>
+        <button onClick={() => dispatch(reset())}>Reset</button>
+        <button className={styles.primary} onClick={() => dispatch(increment())} aria-label="Increment">+</button>
+      </div>
     </div>
   );
 };
