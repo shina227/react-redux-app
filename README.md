@@ -243,3 +243,11 @@ export default App;
    Create another reducer for managing user authentication.
 
 ---
+
+## Run locally
+```bash
+npm install
+npm run dev
+npm run build
+```
+Extras beyond the activity: a "Set value" action and localStorage persistence of the Redux state.
