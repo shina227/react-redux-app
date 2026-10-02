@@ -28,6 +28,21 @@
   gap: 0.5rem;
 }
 
+.form {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.form input {
+  flex: 2;
+  min-width: 0;
+  padding: 0.75rem;
+  font: inherit;
+  border: 1px solid #d1d5db;
+  border-radius: 0.6rem;
+}
+
 .card button {
   flex: 1;
   padding: 0.75rem 0;

@@ -1,5 +1,5 @@
 import type { Reducer, UnknownAction } from "redux";
-import { INCREMENT, DECREMENT, RESET } from "../actions/counterActions";
+import { INCREMENT, DECREMENT, RESET, SET_VALUE } from "../actions/counterActions";
 
 export interface CounterState {
   value: number;
@@ -18,6 +18,10 @@ export const counterReducer: Reducer<CounterState, UnknownAction> = (
       return { ...state, value: state.value - 1 };
     case RESET:
       return initialState;
+    case SET_VALUE:
+      return typeof action.payload === "number"
+        ? { ...state, value: action.payload }
+        : state;
     default:
       return state;
   }
